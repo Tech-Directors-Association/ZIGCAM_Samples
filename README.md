@@ -75,12 +75,14 @@ Check the official NDI documentation to see where the NDI metadata is located on
 NDI's metadata is specified by its developer, NewTek, as XML plain text.  
 
 ```xml
-<info><app>ZIGCAM</app>
+<info>
+    <app>ZIGCAM</app>
     <ver>1.0.4</ver>
     <time>471821.8482</time>
     <frame>2472</frame>
     <ndi_frame>2425</ndi_frame>
-</info><settings>
+</info>
+<settings>
     <tracking_mode>0</tracking_mode>
     <use_depth>1</use_depth>
     <use_pseg>1</use_pseg>
@@ -124,3 +126,24 @@ NDI's metadata is specified by its developer, NewTek, as XML plain text.
     </planes>
 </worldtrack>
 ```
+There are a lot of them, so I'll just scratch the surface.  
+
+## info
+Basic information about ZIGCAM is available here.  
+Name, version name, number of NDI frames and which frames on the device were captured.  
+This block will always be sent.  
+## settings
+The settings at the time of ZIGCAM transmission are recorded.  
+The "tracking_mode" is an enum containing the tracking mode set in ZIGCAM's Settings: 0 for "WolrdTracking", 1 for "FaceTracking", and 2 for "BodyTracking".  
+"set_img" is a way to store additional information; 0 means the data is sent using the alpha channel, 1 means the data is sent using tiling.  
+This block will always be sent.  
+
+## img_size
+The size of each image is described.  
+This tag is only sent when tiling is used.  
+## worldtrack
+World Tracking information. This tag will be sent only when "World Tracking" is set.  
+## facetrack
+Face Tracking information. This tag will be sent only when "Face Tracking" is set.  
+## bodytrack
+Body Tracking information. This tag will be sent only when "Body Tracking" is set.  
