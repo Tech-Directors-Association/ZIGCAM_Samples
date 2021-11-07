@@ -74,7 +74,7 @@ However, TouchDesigner and other programs provide an environment for easy readin
 Check the official NDI documentation to see where the NDI metadata is located on the data.  
 NDI's metadata is specified by its developer, NewTek, as XML plain text.  
 
-'''xml
+```xml
 <info><app>ZIGCAM</app>
     <ver>1.0.4</ver>
     <time>471821.8482</time>
@@ -123,4 +123,4 @@ NDI's metadata is specified by its developer, NewTek, as XML plain text.
         <s>0.6512,0.0000,0.3721</s>
     </planes>
 </worldtrack>
-'''
+```
