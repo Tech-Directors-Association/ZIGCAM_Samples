@@ -37,8 +37,10 @@ Although it is possible to use NDI over Wifi, it is recommended to use a wired c
 # Operation
 ZIGCAM is very simple and has only two screens.
 The first screen shows a preview of the camera, and you can simply press the "Send NDI" button at the bottom. The NDI will now be sent.  
+![This is an image](/assets/images/00_main.png)
 The second screen is the settings screen, which can be accessed by clicking the "Settings" button at the top of the first screen.  
-There are several settings, some of which are not available at the same time due to iOS specifications, so there are some buttons and parameters that become unavailable each time you change the settings.  
+There are several settings, some of which are not available at the same time due to iOS specifications, so there are some buttons and parameters that become unavailable each time you change the settings.
+![This is an image](/assets/images/01_settings.png)
 
 ## Tracking Mode
 Select the tracking mode. Currently, there are three modes to choose from.  
