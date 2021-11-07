@@ -68,3 +68,59 @@ If they are detected, they will be added to the NDI Metadata.
 You can set whether or not Vertical planes are also detected in World Tracking mode.  
 If they are detected, they will be added to the NDI Metadata.  
 
+# How to read metadata
+You can easily read NDI data, but you may not be able to easily read about NDI metadata.  
+However, TouchDesigner and other programs provide an environment for easy reading.  
+Check the official NDI documentation to see where the NDI metadata is located on the data.  
+NDI's metadata is specified by its developer, NewTek, as XML plain text.  
+
+'''xml
+<info><app>ZIGCAM</app>
+    <ver>1.0.4</ver>
+    <time>471821.8482</time>
+    <frame>2472</frame>
+    <ndi_frame>2425</ndi_frame>
+</info><settings>
+    <tracking_mode>0</tracking_mode>
+    <use_depth>1</use_depth>
+    <use_pseg>1</use_pseg>
+    <depth_type>0</depth_type>
+    <set_img>1</set_img>
+</settings>
+<img_size>
+    <color_size>960,720</color_size>
+    <depth_size>128,96</depth_size>
+    <depth_scale>10.0000</depth_scale>
+    <pseg_size>96,128</pseg_size>
+</img_size>
+<worldtrack>
+    <t>-0.4301,-0.2097,-0.3692</t>
+    <r>45.9087,-148.4460,0.0154</r>
+    <h_fov>64.4967</h_fov>
+    <v_fov>50.6455</v_fov>
+    <p_mat1>1.5850,0.0000,0.0000,0.0000</p_mat1>
+    <p_mat2>0.0000,2.1133,0.0000,0.0000</p_mat2>
+    <p_mat3>0.0042,-0.0060,-1.0000,-1.0000</p_mat3>
+    <p_mat4>0.0000,0.0000,-0.0010,0.0000</p_mat4>
+    <planes>
+        <id>0</id>
+        <t>0.0383,0.0000,0.0479</t>
+        <s>0.7758,0.0000,0.3927</s>
+        <id>1</id>
+        <t>0.0150,0.0000,0.1480</t>
+        <s>0.6020,0.0000,1.1341</s>
+        <id>2</id>
+        <t>0.0732,0.0000,0.2034</t>
+        <s>2.0988,0.0000,0.9925</s>
+        <id>3</id>
+        <t>-0.1006,0.0000,0.0559</t>
+        <s>1.0062,0.0000,0.7826</s>
+        <id>4</id>
+        <t>-0.0671,0.0000,0.0112</t>
+        <s>0.5814,0.0000,0.6037</s>
+        <id>5</id>
+        <t>-0.0155,0.0000,0.0372</t>
+        <s>0.6512,0.0000,0.3721</s>
+    </planes>
+</worldtrack>
+'''
