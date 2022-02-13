@@ -149,3 +149,8 @@ World Tracking information. This tag will be sent only when "World Tracking" is 
 Face Tracking information. This tag will be sent only when "Face Tracking" is set.  
 ## bodytrack
 Body Tracking information. This tag will be sent only when "Body Tracking" is set.  
+  
+# ARKit Space Environment
+ARKit is Y-up.  
+And ARKit's rotation order is Z-X-Y.  
+
